@@ -105,6 +105,27 @@ public class LinkedList {
             current.next = null;
         }
     }
+    /*
+     * This method is used to find the node with the give value
+     * It will return position of node if found
+     * else it will return -1
+     * */
+    public int findNode(int data){
+        int position = 0;
+        if (head == null)
+            return -1;
+        else{
+            Node current = head;
+            while (current != null){
+                if (current.data == data){
+                    return position;
+                }
+                position++;
+                current = current.next;
+            }
+            return -1;
+        }
+    }
 
 
 }

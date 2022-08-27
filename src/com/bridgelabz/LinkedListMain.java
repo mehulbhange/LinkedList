@@ -15,7 +15,7 @@ public class LinkedListMain {
         int ch;
         do{
             System.out.println("\n0.Exit \n1.Add node at start \n2.Add node at end \n3.Add node in between" +
-                    "\n4.Delete first element \n5.Delete last element");
+                    "\n4.Delete first element \n5.Delete last element \n6.Find node");
             ch = sc.nextInt();
             switch (ch){
                 case 0:
@@ -64,6 +64,17 @@ public class LinkedListMain {
                     ll4.deleteLastElement();
                     ll4.displayLinkedList();
                     System.out.println();
+                    break;
+                case 6:
+                    LinkedList ll5 = new LinkedList();
+                    ll5.addNodeAtEnd(56);
+                    ll5.addNodeAtEnd(30);
+                    ll5.addNodeAtEnd(70);
+                    int x = ll5.findNode(30);
+                    if ( x == -1)
+                        System.out.println("Not found!");
+                    else
+                        System.out.println("Found at position "+x);
                     break;
                 default:
                     System.out.println("Invalid input!");
