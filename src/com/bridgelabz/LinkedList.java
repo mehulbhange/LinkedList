@@ -79,5 +79,13 @@ public class LinkedList {
         }
     }
 
+    public void deleteFirstElement(){
+        if (head == null)
+            System.out.println("Linked list is empty!");
+        else {
+            head = head.next;
+        }
+    }
+
 
 }
