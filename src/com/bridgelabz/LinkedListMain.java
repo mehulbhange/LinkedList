@@ -14,7 +14,7 @@ public class LinkedListMain {
 
         int ch;
         do{
-            System.out.println("\n0.Exit \n1.Add node at start \n2.Add node at end \n");
+            System.out.println("\n0.Exit \n1.Add node at start \n2.Add node at end \n3.Add node in between");
             ch = sc.nextInt();
             switch (ch){
                 case 0:
@@ -33,6 +33,15 @@ public class LinkedListMain {
                     linkedList1.addNodeAtEnd(30);
                     linkedList1.addNodeAtEnd(70);
                     linkedList1.displayLinkedList();
+                    break;
+                case 3:
+                    LinkedList ll2 = new LinkedList();
+                    ll2.addNodeAtEnd(56);
+                    ll2.addNodeAtEnd(70);
+                    ll2.displayLinkedList();
+                    System.out.println();
+                    ll2.addInBetween(1,30);
+                    ll2.displayLinkedList();
                     break;
                 default:
                     System.out.println("Invalid input!");

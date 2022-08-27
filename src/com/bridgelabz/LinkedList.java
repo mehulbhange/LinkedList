@@ -56,5 +56,28 @@ public class LinkedList {
         }
     }
 
+    public void addInBetween(int index, int data){
+        Node newNode = new Node(data);
+        newNode.next = null;
+
+        if(index == 0)
+            addNodeAtStart(data);
+        else{
+            Node current = head;
+            Node prev = head;
+            for(int i=0;i < index; i++){
+                prev = current;
+                current = current.next;
+                if (current == null){
+                    addNodeAtEnd(data);
+                    return;
+                }
+            }
+            Node temp = prev.next;
+            prev.next = newNode;
+            newNode.next = temp;
+        }
+    }
+
 
 }
