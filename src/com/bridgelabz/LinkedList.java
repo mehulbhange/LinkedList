@@ -29,5 +29,19 @@ public class LinkedList {
         }
     }
 
+    public void addNodeAtStart(int data){
+        Node newNode = new Node(data);
+
+        if (head == null){
+            head = newNode;
+            newNode.next = null;
+        }else{
+            Node temp = head;
+            head = newNode;
+            newNode.next = temp;
+        }
+
+    }
+
 
 }
