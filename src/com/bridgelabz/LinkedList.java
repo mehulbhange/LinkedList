@@ -87,5 +87,24 @@ public class LinkedList {
         }
     }
 
+    /*
+    * method is used to delete the last element from the linked list
+    * */
+    public void deleteLastElement(){
+        if (head == null)
+            System.out.println("Linked list is empty!");
+        else {
+            Node current = head;
+            if(head.next == null){
+                head = null;
+                return;
+            }
+            while (current.next.next != null){
+                current = current.next;
+            }
+            current.next = null;
+        }
+    }
+
 
 }
