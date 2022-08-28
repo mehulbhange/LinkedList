@@ -126,6 +126,42 @@ public class LinkedList {
             return -1;
         }
     }
-
+    /*
+     * This method is used to find the node with the give value
+     * and delete that node
+     * */
+    public void deleteNode(int data){
+        if (head == null)
+            System.out.println("Linked list is empty!");
+        else{
+            Node current = head;
+            Node prev = head;
+            if (head.data == data){
+                head = head.next;
+                return;
+            }
+            while (current != null){
+                if (current.data == data){
+                    prev.next = current.next;
+                    return;
+                }
+                prev = current;
+                current = current.next;
+            }
+            System.out.println("node not found!");
+        }
+    }
+    /*
+    * This method is used to get the size of the linked list
+    * */
+    public int size(){
+        Node current = head;
+        int size = 0;
+        while (current != null){
+            size++;
+            current = current.next;
+        }
+        return size;
+    }
 
 }

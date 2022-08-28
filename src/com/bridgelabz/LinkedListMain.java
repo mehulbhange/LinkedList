@@ -16,7 +16,8 @@ public class LinkedListMain {
         do{
             System.out.println("\n0.Exit \n1.Add node at start \n2.Add node at end \n3.Add node in between" +
                     "\n4.Delete first element \n5.Delete last element \n6.Find node" +
-                    "\n7.Insert after a particular value");
+                    "\n7.Insert after a particular value" +
+                    "\n8.Delete node");
             ch = sc.nextInt();
             switch (ch){
                 case 0:
@@ -90,6 +91,18 @@ public class LinkedListMain {
                     else
                         ll6.addInBetween(position+1, 40);
                     ll6.displayLinkedList();
+                    break;
+                case 8:
+                    LinkedList ll7 = new LinkedList();
+                    ll7.addNodeAtEnd(56);
+                    ll7.addNodeAtEnd(30);
+                    ll7.addNodeAtEnd(40);
+                    ll7.addNodeAtEnd(70);
+                    ll7.displayLinkedList();
+                    System.out.println();
+                    ll7.deleteNode(40);
+                    ll7.displayLinkedList();
+                    System.out.println("\n size of linked list : "+ll7.size());
                     break;
                 default:
                     System.out.println("Invalid input!");
